@@ -1,8 +1,8 @@
-# build_scripts
+# build_script
 ```
-curl https://github.com/Gtajisan/build_scripts/raw/refs/heads/a15/crd/a14-evoX.sh | bash
+curl https://raw.githubusercontent.com/tillua467/build_scripts/refs/heads/main/Phoenix-evoX.sh | bash
 ```
-# crave 
+# build_script for crave 
 ```
-crave run --clean --no-patch -- "curl https://raw.githubusercontent.com/Gtajisan/build_scripts/refs/heads/a14-projectblaze/script.sh | bash"
+crave run --clean --no-patch -- "curl https://raw.githubusercontent.com/tillua467/build_scripts/refs/heads/main/Phoenix-evoX.sh | bash"
 ```
