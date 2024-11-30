@@ -34,8 +34,8 @@ lunch lineage_phoenix-ap3a-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
-make installclean
-echo "============="
+# make installclean
+# echo "============="
 
 # Build rom
 m evolution
