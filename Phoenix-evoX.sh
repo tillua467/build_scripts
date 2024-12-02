@@ -33,6 +33,7 @@ echo "============="
 # Export
 export BUILD_USERNAME=tillua467 
 export BUILD_HOSTNAME=crave
+export TARGET_DISABLE_EPPE=true
 echo "======= Export Done ======"
 
 # Set up build environment
