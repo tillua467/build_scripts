@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "================================================"
-echo "  Files Are already Cloned Starting the build"
+echo "  Files Are already Cloned. Starting the build"
 echo "================================================"
 
 # Export
@@ -9,7 +9,6 @@ echo "======= Exporting ======"
 export BUILD_USERNAME=tillua467 
 export BUILD_HOSTNAME=crave
 export TARGET_DISABLE_EPPE=true
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 echo "======= Export Done ======"
 
 # Set up build environment
@@ -25,6 +24,6 @@ echo "=====Lunching done========"
 
 # Build rom
 echo "===================================="
-echo "   STARTING Build EVOLUTION-X"
+echo "   STARTING TO BUILD EVOLUTION-X"
 echo "===================================="
 m evolution
