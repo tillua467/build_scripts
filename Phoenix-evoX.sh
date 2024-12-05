@@ -8,12 +8,12 @@ echo "========================================================================"
 echo "                        SYSTEM UPGRADED"
 echo "========================================================================="
 
-sudo apt install curl ccache
+sudo apt install ccache
 git clone https://github.com/akhilnarang/scripts; cd scripts; sudo bash setup/android_build_env.sh
 cd ..
 
 echo "========================================================================"
-echo "                        NECESSARY STUFF'S "
+echo "                   INSTALLED NECESSARY STUFF'S "
 echo "========================================================================="
 
 
