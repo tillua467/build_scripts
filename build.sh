@@ -9,6 +9,7 @@ echo "======= Exporting ======"
 export BUILD_USERNAME=tillua467 
 export BUILD_HOSTNAME=crave
 export TARGET_DISABLE_EPPE=true
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 echo "======= Export Done ======"
 
 # Set up build environment
