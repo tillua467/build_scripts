@@ -32,13 +32,13 @@ echo "===================================="
 
 
 # repo init rom
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs --depth=1
+repo init -u https://github.com/Evolution-X/manifest --depth 1 -b vic --git-lfs
 echo "=============================================="
 echo "       Cloned Mniafest successfully"
 echo "=============================================="
 
 # Local manifests
-git clone --depth=1 https://github.com/tillua467/local_manifests -b main .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth 1 -b main .repo/local_manifests
 echo "============================"
 echo "Local manifest cloned successfully"
 echo "============================"
