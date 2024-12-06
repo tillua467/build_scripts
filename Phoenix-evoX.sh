@@ -55,6 +55,7 @@ export BUILD_USERNAME=tillua467
 export BUILD_HOSTNAME=crave
 export TARGET_DISABLE_EPPE=true
 export TZ=Asia/Dhaka
+export ALLOW_MISSING_DEPENDENCIES=true
 echo "======= Export Done ======"
 
 # Set up build environment
