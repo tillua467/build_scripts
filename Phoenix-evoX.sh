@@ -2,21 +2,8 @@
 
 # Upgrade System
 
-sudo apt update && sudo apt upgrade -y
-
 echo "========================================================================"
-echo "                        SYSTEM UPGRADED"
-echo "========================================================================="
-
-sudo apt install -y ccache
-
-git clone https://github.com/akhilnarang/scripts
-cd scripts || exit
-sudo bash setup/android_build_env.sh
-cd ..
-
-echo "========================================================================"
-echo "                   INSTALLED NECESSARY STUFF'S "
+echo "             NECESSARY STUFF'S IS ALREADY INSTALLED"
 echo "========================================================================="
 
 
@@ -31,6 +18,7 @@ rm -rf  device/xiaomi
 rm -rf device/xiaomi/sm6150-common
 rm -rf vendor/xiaomi/sm6150-common
 rm -rf hardware/xiaomi
+rm -rf out/
 
 echo "===================================="
 echo "  Removing Unnecessary Files Done"
@@ -40,13 +28,13 @@ echo "===================================="
 
 
 # repo init rom
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs --depth=1
 echo "=============================================="
 echo "       Cloned Mniafest successfully"
 echo "=============================================="
 
 # Local manifests
-git clone https://github.com/tillua467/local_manifests -b main .repo/local_manifests
+git clone --depth=1 https://github.com/tillua467/local_manifests -b main .repo/local_manifests
 echo "============================"
 echo "Local manifest cloned successfully"
 echo "============================"
