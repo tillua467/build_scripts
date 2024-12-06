@@ -18,7 +18,11 @@ rm -rf  device/xiaomi
 rm -rf device/xiaomi/sm6150-common
 rm -rf vendor/xiaomi/sm6150-common
 rm -rf hardware/xiaomi
-rm -rf out/target/product/phoenix
+rm -rf out/target/product/*/*zip
+rm -rf out/target/product/*/*txt
+rm -rf out/target/product/*/boot.img
+rm -rf out/target/product/*/recovery.img
+rm -rf out/target/product/*/super*img
 
 echo "===================================="
 echo "  Removing Unnecessary Files Done"
