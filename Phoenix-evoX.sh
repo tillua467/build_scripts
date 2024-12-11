@@ -4,16 +4,16 @@
 
 sudo apt update && sudo apt upgrade -y
 echo "========================================================================"
-#echo "                        SYSTEM UPGRADED"
-#echo "========================================================================="
-#sudo apt install -y ccache
-#git clone https://github.com/akhilnarang/scripts
-#cd scripts || exit
-#sudo bash setup/android_build_env.sh
-#cd ..
-#echo "========================================================================"
-#echo "                   INSTALLED NECESSARY STUFF'S "
-#echo "========================================================================="
+echo "                        SYSTEM UPGRADED"
+echo "========================================================================="
+sudo apt install -y ccache
+git clone https://github.com/akhilnarang/scripts
+cd scripts || exit
+sudo bash setup/android_build_env.sh
+cd ..
+echo "========================================================================"
+echo "                   INSTALLED NECESSARY STUFF'S "
+echo "========================================================================="
 
 
 # Remove Unnecessary Files
@@ -48,9 +48,9 @@ echo "=============================================="
 
 # Local manifests
 git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
-echo "============================"
+echo "=================================="
 echo "Local manifest cloned successfully"
-echo "============================"
+echo "=================================="
 
 # Sync
 /opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
