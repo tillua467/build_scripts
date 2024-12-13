@@ -32,7 +32,6 @@ rm -rf out/target/product/*/*txt
 rm -rf out/target/product/*/boot.img
 rm -rf out/target/product/*/recovery.img
 rm -rf out/target/product/*/super*img
-rm -rf hardware/lineage/compat
 
 echo "===================================="
 echo "  Removing Unnecessary Files Done"
@@ -55,9 +54,10 @@ echo "=================================="
 
 # Cloning system repos
 rm -rf system/Core
+rm -rf hardware/lineage/compat
 echo "======= Cloning Some System Repos ========"
 git clone https://github.com/LineageOS/android_system_core -b lineage-22.0 system/core
-git clone https://github.com/AOSPA/android_hardware_lineage_compat -b vauxite hardware/lineage/compat
+git clone https://github.com/LineageOS/android_hardware_lineage_compat -b lineage-22.0 hardware/lineage/compat
 echo "======== Cloned Some System Repos ========"
 # Sync
 /opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
