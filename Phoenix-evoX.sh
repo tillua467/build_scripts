@@ -57,7 +57,7 @@ rm -rf system/Core
 rm -rf hardware/lineage/compat
 echo "======= Cloning Some System Repos ========"
 git clone https://github.com/LineageOS/android_system_core -b lineage-22.0 system/core
-git clone https://github.com/LineageOS/android_hardware_lineage_compat -b lineage-22.0 hardware/lineage/compat
+git clone https://github.com/ProjectPixelage/android_hardware_lineage_compat -b 15 hardware/lineage/compat
 echo "======== Cloned Some System Repos ========"
 # Sync
 /opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
