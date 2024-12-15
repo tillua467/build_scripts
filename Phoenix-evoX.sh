@@ -47,7 +47,7 @@ echo "       Cloned Mniafest successfully"
 echo "=============================================="
 
 # Local manifests
-git clone https://github.com/tillua467/local_manifests --depth=1 -b Evo-Exp-1 .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
