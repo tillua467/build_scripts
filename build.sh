@@ -1,5 +1,5 @@
 #!/bin/bash
-# crave run --clean --no-patch -- "curl https://raw.githubusercontent.com/tillua467/build_scripts/refs/heads/main/build.sh | bash"
+# crave run --no-patch -- "curl https://raw.githubusercontent.com/tillua467/build_scripts/refs/heads/main/build.sh | bash"
 echo "================================================"
 echo "  Files Are already Cloned. Starting the build"
 echo "================================================"
