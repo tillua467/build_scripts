@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Upgrade System
-
 sudo apt update && sudo apt upgrade -y
 echo "========================================================================"
 echo "                        SYSTEM UPGRADED"
@@ -41,12 +40,18 @@ echo "===================================="
 
 
 # repo init rom
+echo "=============================================="
+echo "       Cloning Mniafest..........."
+echo "=============================================="
 repo init -u https://github.com/Evolution-X/manifest --depth=1 -b vic --git-lfs
 echo "=============================================="
-echo "       Cloned Mniafest successfully"
+echo "       Mniafest Cloned successfully"
 echo "=============================================="
 
 # Local manifests
+echo "=================================="
+echo "Cloning Local manifest............"
+echo "=================================="
 git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
@@ -57,12 +62,12 @@ rm -rf system/Core
 rm -rf hardware/lineage/compat
 echo "======= Cloning Some System Repos ========"
 git clone https://github.com/LineageOS/android_system_core -b lineage-22.0 system/core
-git clone https://github.com/ProjectPixelage/android_hardware_lineage_compat -b 15 hardware/lineage/compat
+git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-22.0 hardware/lineage/compat
 echo "======== Cloned Some System Repos ========"
 # Sync
 /opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 echo "============="
-echo "Sync success"
+echo " Sync success"
 echo "============="
 
 # Export
