@@ -85,7 +85,8 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lineage_phoenix-userdebug 
+echo "======Lunching....========"
+lunch lineage_phoenix-userdebug || lunch lineage_phoenix-ap3a-userdebug || lunch lineage_phoenix-ap2a-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
