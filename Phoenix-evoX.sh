@@ -85,7 +85,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_phoenix-ap3a-userdebug 
+lineage_phoenix-userdebug 
 echo "=====Lunching done========"
 
 # Make cleaninstall
@@ -94,6 +94,6 @@ echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building EVOLUTION-X..."
+echo "      Building LINEAGE-OS..."
 echo "===================================="
-m evolution
+brunch phoenix
