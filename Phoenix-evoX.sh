@@ -43,7 +43,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 echo "=============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
