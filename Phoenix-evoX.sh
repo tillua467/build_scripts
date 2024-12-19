@@ -43,7 +43,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/Evolution-X/manifest --depth=1 -b vic --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs
 echo "=============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
@@ -65,7 +65,7 @@ git clone https://github.com/LineageOS/android_system_core -b lineage-22.0 syste
 git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-22.0 hardware/lineage/compat
 echo "======== Cloned Some System Repos ========"
 # Sync
-/opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+/opt/crave/resync.sh && repo sync
 echo "============="
 echo " Sync success"
 echo "============="
