@@ -43,7 +43,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/alphadroid-project/manifest -b alpha-15-wip --git-lfs
+repo init -u https://github.com/Project-Mist-OS/manifest -b 15 --git-lfs
 echo"==============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
@@ -59,7 +59,7 @@ echo "=================================="
 
 
 # Sync
-/opt/crave/resync.sh && repo sync
+/opt/crave/resync.sh && repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 echo "============="
 echo " Sync success"
 echo "============="
@@ -80,7 +80,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 echo "======Lunching....========"
-lunch lineage_phoenix-userdebug || lunch lineage_phoenix-ap3a-userdebug || lunch lineage_phoenix-ap2a-userdebug
+mistify phoenix userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
@@ -91,4 +91,4 @@ echo "============="
 echo "===================================="
 echo "      Building Crdroid..."
 echo "===================================="
-brunch phoenix
+mist b
