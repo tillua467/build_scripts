@@ -89,6 +89,6 @@ echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building Crdroid..."
+echo "      Building Mist-Os..."
 echo "===================================="
 mist b
