@@ -5,13 +5,8 @@ sudo apt update && sudo apt upgrade -y
 echo "========================================================================"
 echo "                        SYSTEM UPGRADED"
 echo "========================================================================="
-sudo apt install -y ccache
-git clone https://github.com/akhilnarang/scripts
-cd scripts || exit
-sudo bash setup/android_build_env.sh
-cd ..
 echo "========================================================================"
-echo "                   INSTALLED NECESSARY STUFF'S "
+echo "                 ALREADY INSTALLED NECESSARY STUFF'S "
 echo "========================================================================="
 
 
@@ -43,7 +38,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 echo "=============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
@@ -65,7 +60,7 @@ git clone https://github.com/LineageOS/android_system_core -b lineage-22.0 syste
 git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-22.0 hardware/lineage/compat
 echo "======== Cloned Some System Repos ========"
 # Sync
-/opt/crave/resync.sh && repo sync
+/opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 echo "============="
 echo " Sync success"
 echo "============="
@@ -97,4 +92,4 @@ echo "============="
 echo "===================================="
 echo "      Building LINEAGE-OS..."
 echo "===================================="
-brunch phoenix
+m evolution
