@@ -43,7 +43,8 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-15-wip --git-lfs
+echo"==============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
 
@@ -51,7 +52,7 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b AL-15 .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
