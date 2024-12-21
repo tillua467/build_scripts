@@ -36,11 +36,11 @@ echo "===================================="
 
 # repo init rom
 echo "=============================================="
-echo "       Cloning Mniafest..........."
+echo "       Cloning Manifest..........."
 echo "=============================================="
 repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 echo "=============================================="
-echo "       Mniafest Cloned successfully"
+echo "       Manifest Cloned successfully"
 echo "=============================================="
 
 # Local manifests
@@ -90,6 +90,6 @@ echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building LINEAGE-OS..."
+echo "      Building EVOLUTION-X..."
 echo "===================================="
 m evolution
