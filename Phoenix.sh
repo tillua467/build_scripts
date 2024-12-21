@@ -71,6 +71,8 @@ echo "======= Export Done ======"
 # Set up build environment
 echo "====== Starting Envsetup ======="
 source build/envsetup.sh
+brunch phoenix userdebug
+brunch phoenix
 echo "====== Envsetup Done ======="
 
 # Lunch
