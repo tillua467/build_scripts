@@ -47,7 +47,7 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b a15 .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
