@@ -5,11 +5,6 @@ sudo apt update && sudo apt upgrade -y
 echo "========================================================================"
 echo "                        SYSTEM UPGRADED"
 echo "========================================================================="
-sudo apt install -y ccache
-git clone https://github.com/akhilnarang/scripts
-cd scripts || exit
-sudo bash setup/android_build_env.sh
-cd ..
 echo "========================================================================"
 echo "                   INSTALLED NECESSARY STUFF'S "
 echo "========================================================================="
