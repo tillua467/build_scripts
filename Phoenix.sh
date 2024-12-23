@@ -38,7 +38,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/alphadroid-project/manifest -b alpha-15-wip --git-lfs
+repo init -u https://github.com/GenesisOS/manifest.git -b verve --git-lfs
 echo"==============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
@@ -47,14 +47,14 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b AL-15 .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
 
 
 # Sync
-/opt/crave/resync.sh && repo sync
+/opt/crave/resync.sh && repo sync -j$(nproc --all) --force-sync --no-tags --no-clone-bundle --prune --optimized-fetch
 echo "============="
 echo " Sync success"
 echo "============="
@@ -75,7 +75,8 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 echo "======Lunching....========"
-lunch lineage_phoenix-userdebug || lunch lineage_phoenix-ap3a-userdebug || lunch lineage_phoenix-ap2a-userdebug
+lunch genesis_phoenix-userdebug
+breakfast genesis_phoenix-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
@@ -84,6 +85,6 @@ echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building Alphadroid..."
+echo "      Building Genesis..."
 echo "===================================="
-brunch phoenix
+mka genesis
