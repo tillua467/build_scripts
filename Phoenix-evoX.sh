@@ -47,18 +47,11 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b EVO-15 .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
 
-# Cloning system repos
-rm -rf system/Core
-rm -rf hardware/lineage/compat
-echo "======= Cloning Some System Repos ========"
-git clone https://github.com/LineageOS/android_system_core -b lineage-22.0 system/core
-git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-22.0 hardware/lineage/compat
-echo "======== Cloned Some System Repos ========"
 # Sync
 /opt/crave/resync.sh && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 echo "============="
