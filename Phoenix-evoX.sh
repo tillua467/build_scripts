@@ -40,6 +40,7 @@ echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
 repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+echo "=============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
 
@@ -47,11 +48,15 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b Custom-CD .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
-
+#Set Up for custom Crdroid 
+echo "Setup for Custom Crdroid..."
+wget https://raw.githubusercontent.com/custom-crdroid/custom_cr_setup/refs/heads/15.0/vendorsetup.sh
+bash vendorsetup.sh
+echo "Setup for Custom Crdroid done continuing the build"
 
 # Sync
 /opt/crave/resync.sh && repo sync
