@@ -75,7 +75,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 echo "======Lunching....========"
-lunch lineage_phoenix-ap3a-userdebug
+breakfast lineage_phoenix-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
