@@ -38,7 +38,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --git-lfs
+repo init --depth=1 --no-repo-verify -u https://github.com/yehonatan2020/losp_manifest -b lineage-22.1 --git-lfs
 echo "=============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
@@ -47,13 +47,13 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b Derp-15 .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b LOSP .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
 
 # Sync
-/opt/crave/resync.sh && repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+/opt/crave/resync.sh && repo --no-pager --color=always sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune
 echo "============="
 echo " Sync success"
 echo "============="
@@ -74,7 +74,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 echo "======Lunching....========"
-lunch derp_phoenix-userdebug
+lunch lineage_phoenix-ap3a-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
@@ -83,6 +83,6 @@ echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building LINEAGE-OS..."
+echo "      Building LOSP..."
 echo "===================================="
-mka derp
+mka bacon
