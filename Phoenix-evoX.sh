@@ -85,4 +85,4 @@ echo "============="
 echo "===================================="
 echo "      Building LOSP..."
 echo "===================================="
-mka bacon
+brunch phoenix 
