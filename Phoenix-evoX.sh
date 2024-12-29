@@ -68,19 +68,13 @@ export TZ=Asia/Dhaka
 export ALLOW_MISSING_DEPENDENCIES=true
 echo "======= Export Done ======"
 
+make installclean
+echo "============="
+
 # Set up build environment
 echo "====== Starting Envsetup ======="
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
-
-# Lunch
-echo "======Lunching....========"
-lunch lineage_phoenix-ap3a-userdebug
-echo "=====Lunching done========"
-
-# Make cleaninstall
-make installclean
-echo "============="
 
 # Build rom
 echo "===================================="
