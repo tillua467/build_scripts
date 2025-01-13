@@ -71,18 +71,13 @@ echo "======= Export Done ======"
 echo "====== Starting Envsetup ======="
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
-
-# Lunch
-echo "======Lunching....========"
-lunch infinity_phoenix-userdebug
-echo "=====Lunching done========"
-
 # Make cleaninstall
 make installclean
 echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building Infinty-X..."
+echo "      Lunch and Build Infinty-X..."
 echo "===================================="
-mka bacon
+
+brunch phoenix
