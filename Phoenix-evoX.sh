@@ -15,9 +15,9 @@ echo "===================================="
 echo "     Removing Unnecessary Files"
 echo "===================================="
 rm -rf .repo/local_manifests
-rm -rf  vendor/xiaomi
-rm -rf  kernel/xiaomi
-rm -rf  device/xiaomi
+rm -rf vendor/xiaomi
+rm -rf kernel/xiaomi
+rm -rf device/xiaomi
 rm -rf device/xiaomi/sm6150-common
 rm -rf vendor/xiaomi/sm6150-common
 rm -rf hardware/xiaomi
@@ -38,7 +38,7 @@ echo "===================================="
 echo "=============================================="
 echo "       Cloning Mniafest..........."
 echo "=============================================="
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --git-lfs
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 echo "=============================================="
 echo "       Mniafest Cloned successfully"
 echo "=============================================="
@@ -47,7 +47,7 @@ echo "=============================================="
 echo "=================================="
 echo "Cloning Local manifest............"
 echo "=================================="
-git clone https://github.com/tillua467/local_manifests --depth=1 -b Derp-15 .repo/local_manifests
+git clone https://github.com/tillua467/local_manifests --depth=1 -b main .repo/local_manifests
 echo "=================================="
 echo "Local manifest cloned successfully"
 echo "=================================="
@@ -74,7 +74,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 echo "======Lunching....========"
-lunch derp_phoenix-userdebug
+lunch infinity_phoenix-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
@@ -83,6 +83,6 @@ echo "============="
 
 # Build rom
 echo "===================================="
-echo "      Building LINEAGE-OS..."
+echo "      Building Infinty-X..."
 echo "===================================="
-mka derp
+mka bacon
