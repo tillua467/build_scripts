@@ -74,7 +74,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 echo "======Lunching....========"
-lunch infinity_phoenix-userdebug
+lunch infinity_phoenix-ap3a-userdebug
 echo "=====Lunching done========"
 
 # Make cleaninstall
